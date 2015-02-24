@@ -1,0 +1,26 @@
+{
+  "name": "expression-tree",
+  "version": "0.0.0",
+  "description": "Stateful expression tree for set algebra",
+  "main": "TreeFilter.js",
+  "scripts": {
+    "test": "faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/expression-tree.git"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/expression-tree/issues"
+  },
+  "homepage": "https://github.com/nichoth/expression-tree",
+  "devDependencies": {
+    "tape": "^3.5.0",
+    "watchify": "^2.4.0"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  }
+}
