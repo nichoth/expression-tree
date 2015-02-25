@@ -23,11 +23,18 @@ var initMocks = function() {
   fac2.results = function() { return Fixture.set2; };
 };
 
-test('intersect works', function (t) {
+test('Intersect works', function (t) {
   t.plan(1);
   initMocks();
   var opNode = new OpNode('intersect', fac1, fac2);
   t.deepEqual(opNode.intersect(set1, set2), ['two', 'three']);
+});
+
+test('Union works', function(t) {
+  t.plan(1);
+  initMocks();
+  var opNode = new OpNode('union', fac1, fac2);
+  t.deepEqual(opNode.union(set1, set2), ['one', 'two', 'three', 'four']);
 });
 
 test('_onChildDestroy() removes child if no survivors', function(t) {

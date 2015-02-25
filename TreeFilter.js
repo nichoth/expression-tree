@@ -33,6 +33,10 @@ var _onDestroy = function(tree, survivor) {
   }
 };
 
+var _onChange = function(tree, node) {
+
+};
+
 /**
  * TreeFilter.js
  * An expression tree for set algebra.

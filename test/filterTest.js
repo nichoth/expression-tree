@@ -54,9 +54,9 @@ test('Handles "destroy" event', function(t) {
   t.plan(2);
   var filter = new Filter();
 
-  facet = filter.add(Fixture.set1);
+  facet = filter.add(Fixture.set1);  // create tree with single node
   t.deepEqual(filter.results(), facet.results());
 
   facet.emit('destroy');
-  t.is(filter.results(), false);
+  t.is(filter.results(), false, 'results() returns false after destroy event');
 });

@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/nichoth/expression-tree",
   "devDependencies": {
-    "tape": "^3.5.0",
-    "watchify": "^2.4.0"
+    "tape": "^3.5.0"
   },
   "dependencies": {
+    "array-union": "^1.0.1",
     "intersect": "^0.1.0",
     "object-assign": "^2.0.0"
   }
