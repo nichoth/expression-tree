@@ -2,6 +2,13 @@
   "name": "tree-filter",
   "version": "0.0.1",
   "description": "Stateful expression tree for set algebra",
+  "keywords": [
+    "array",
+    "events",
+    "expression",
+    "set",
+    "tree"
+  ],
   "main": "TreeFilter.js",
   "scripts": {
     "test": "tape test/*.js"
@@ -10,7 +17,11 @@
     "type": "git",
     "url": "https://github.com/nichoth/expression-tree.git"
   },
-  "author": "Nick Thomas <nichoth@gmail.com>",
+  "author": {
+    "name": "Nick Thomas",
+    "email": "nichoth@gmail.com",
+    "url": "nichoth.github.io"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nichoth/expression-tree/issues"
