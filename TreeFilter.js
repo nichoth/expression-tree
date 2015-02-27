@@ -69,8 +69,8 @@ assign(TreeFilter.prototype, EventEmitter.prototype, {
     return leaf;
   },
 
-  _onDestroy: function(survivor) {
-
+  getRoot: function() {
+    return this._root;
   },
 
   removeFacet: function(facet) {
