@@ -1,5 +1,5 @@
 var Filter = require('../TreeFilter');
-var Facet = require('../lib/Facet');
+var Node = require('../lib/Node');
 var OpNode = require('../lib/OpNode');
 var test = require('tape');
 var EventEmitter = require('events').EventEmitter;
@@ -37,7 +37,7 @@ test('Union works', function(t) {
   t.deepEqual(opNode.union(set1, set2), ['one', 'two', 'three', 'four']);
 });
 
-test('_onChildDestroy() removes child if no survivors', function(t) {
+test('_onChildDestroy() removes child if there are no survivors', function(t) {
   t.plan(1);
   initMocks();
   var opNode = new OpNode('intersect', fac1, fac2);

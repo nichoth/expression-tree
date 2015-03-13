@@ -3,6 +3,10 @@ var EventEmitter = require('events').EventEmitter,
     LeafNode = require('./lib/LeafNode'),
     OpNode = require('./lib/OpNode');
 
+/**
+ * TreeFilter.js
+ * An expression tree for set algebra.
+ */
 var _listenTo = function(node, context) {
   node.on('change', function() {
     _onChange(context, argumnets);
@@ -37,10 +41,7 @@ var _onChange = function(tree, node) {
 
 };
 
-/**
- * TreeFilter.js
- * An expression tree for set algebra.
- */
+
 var TreeFilter = function() {
   this._root = false;
 };
@@ -73,8 +74,8 @@ assign(TreeFilter.prototype, EventEmitter.prototype, {
     return this._root;
   },
 
-  removeFacet: function(facet) {
-    facet.destroy();
+  removeNode: function(node) {
+    node.destroy();
   },
 
   results: function() {

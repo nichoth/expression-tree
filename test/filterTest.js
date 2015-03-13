@@ -1,5 +1,5 @@
 var Filter = require('../TreeFilter');
-var Facet = require('../lib/Facet');
+var Node = require('../lib/Node');
 var OpNode = require('../lib/OpNode');
 var LeafNode = require('../lib/LeafNode');
 var test = require('tape');
@@ -28,21 +28,21 @@ test('Filter can construct without arguments', function(t) {
   t.equal(filter.results(), false, 'root is false');
 });
 
-test('Filter.add() returns a Facet.', function(t) {
+test('Filter.add() returns a Node.', function(t) {
   t.plan(1);
   var filter = new Filter();
-  var facet = filter.add();
-  t.is(facet instanceof Facet, true);
+  var node = filter.add();
+  t.is(node instanceof Node, true);
 });
 
-test('Filter.add() sets the _root property', function(t) {
+test('Filter.getRoot() returns the root node.', function(t) {
   t.plan(1);
   var filter = new Filter();
-  var facet = filter.add(Fixture.set1);
-  t.equal(filter._root, facet);
+  var node = filter.add(Fixture.set1);
+  t.equal(filter._root, node);
 });
 
-test('Add a second node to the filter', function(t) {
+test('Adding a second node to the filter creates an opNode as the root', function(t) {
   t.plan(1);
   var filter = new Filter();
   filter.add(Fixture.set1);
@@ -50,7 +50,7 @@ test('Add a second node to the filter', function(t) {
   t.is(filter._root instanceof OpNode, true, 'root is opNode');
 });
 
-test('Handles "destroy" event', function(t) {
+test('Tree is empty after "destroy" event on a single-node expression', function(t) {
   t.plan(2);
   var filter = new Filter();
 
