@@ -18,7 +18,6 @@ var _listenTo = function(node, context) {
 
 var _replaceRoot = function(tree, newRoot) {
   if (tree._root) {
-    tree._root.removeAllListeners();
     tree._root = newRoot;
   } else {
     tree._root = newRoot;
