@@ -1,6 +1,6 @@
 {
   "name": "tree-filter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Stateful expression tree for set algebra",
   "keywords": [
     "array",
